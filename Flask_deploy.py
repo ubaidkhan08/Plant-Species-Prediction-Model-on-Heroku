@@ -3,6 +3,7 @@ from joblib import dump, load
 import numpy as np
 import streamlit as st
 
+heroku buildpacks:set heroku/python
 model = load('Multi_class_log_model.joblib')
 
 def predict_forest(sepal_length, sepal_width, petal_length, petal_width):
