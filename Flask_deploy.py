@@ -6,7 +6,7 @@ log_model = load('Multi_class_log_model.joblib')
 
 def classify(sepal_length, sepal_width, petal_length, petal_width):
     input=np.array([[sepal_length, sepal_width, petal_length, petal_width]]).astype(np.string_)
-    prediction=model.predict(input)
+    prediction=log_model.predict(input)
     pred = '{}'.format(prediction)
     return(pred)
 
