@@ -5,8 +5,8 @@ import numpy as np
 log_model = load('Multi_class_log_model.joblib')
 
 def classify(sepal_length, sepal_width, petal_length, petal_width):
-    inputs=np.array([[sepal_length, sepal_width, petal_length, petal_width]]).astype(np.string_)
-    prediction=log_model.predict(input)
+    inputs=np.array([[sepal_length, sepal_width, petal_length, petal_width]]).reshape(1, -1)
+    prediction=log_model.predict(inputs)
     pred = '{}'.format(prediction)
     return(pred)
 
@@ -20,11 +20,12 @@ def main():
     </div>
     """
     
+    st.markdown(html_temp, unsafe_allow_html=True)
     sepal_length=st.slider('Select Sepal Length', 0.0, 10.0)
     sepal_width=st.slider('Select Sepal Width', 0.0, 10.0)
     petal_length=st.slider('Select Petal Length', 0.0, 10.0)
     petal_width=st.slider('Select Petal Width', 0.0, 10.0)
-    inputs=[[sepal_length, sepal_width, petal_length, petal_width]]
+    inputs=np.array([[sepal_length, sepal_width, petal_length, petal_width]]).reshape(1, -1)
    
 
     if st.button('Classify'):
