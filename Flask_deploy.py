@@ -20,10 +20,10 @@ def main():
     </div>
     """
     
-    sl=st.slider('Select Sepal Length', 0.0, 10.0)
-    sw=st.slider('Select Sepal Width', 0.0, 10.0)
-    pl=st.slider('Select Petal Length', 0.0, 10.0)
-    pw=st.slider('Select Petal Width', 0.0, 10.0)
+    sepal_length=st.slider('Select Sepal Length', 0.0, 10.0)
+    sepal_width=st.slider('Select Sepal Width', 0.0, 10.0)
+    petal_length=st.slider('Select Petal Length', 0.0, 10.0)
+    petal_width=st.slider('Select Petal Width', 0.0, 10.0)
     inputs=[[sepal_length, sepal_width, petal_length, petal_width]]
    
 
