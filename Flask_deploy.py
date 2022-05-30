@@ -13,7 +13,7 @@ def classify(sepal_length, sepal_width, petal_length, petal_width):
 
     
 def main():
-    st.title("Streamlit Tutorial")
+    st.title("Plant Species Prediction Model")
     html_temp = """
     <div style="background-color:teal ;padding:10px">
     <h2 style="color:white;text-align:center;">Iris Classification</h2>
